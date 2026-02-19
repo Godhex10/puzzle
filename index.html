@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jigsaw Levels</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container-fluid py-3">
+    <div class="d-flex flex-wrap gap-3 align-items-center justify-content-between mb-3">
+      <div class="d-flex flex-wrap gap-2 align-items-center">
+        <h4 class="m-0">Jigsaw Puzzle</h4>
+        <span class="badge text-bg-dark" id="levelBadge">Level 1</span>
+        <span class="badge text-bg-secondary" id="progressBadge">0 / 200</span>
+      </div>
+
+      <div class="d-flex gap-2 align-items-center">
+        <button class="btn btn-outline-light" id="shuffleBtn" type="button">Shuffle</button>
+        <button class="btn btn-outline-light" id="resetBtn" type="button">Reset Level</button>
+        <button class="btn btn-success" id="doneBtn" type="button" disabled>Done</button>
+      </div>
+    </div>
+
+    <div class="game-wrap">
+      <div class="board-col">
+        <div class="board-header">
+          <div class="small text-white-50">Board (snap pieces into place)</div>
+        </div>
+        <div id="board" class="board"></div>
+      </div>
+
+      <div class="tray-col">
+        <div class="tray-header">
+          <div class="small text-white-50">Tray (drag pieces from here)</div>
+        </div>
+        <div id="tray" class="tray"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Intro Modal -->
+  <div class="modal fade" id="introModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-secondary">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title">💛 Hey babby</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Hey babby, I know you like puzzles, so i made one with series of levels for you.
+          <div class="mt-3 text-white-50 small">
+            Drag pieces into the board. When all 200 pieces are correctly placed, the “Done” button will unlock.
+          </div>
+        </div>
+        <div class="modal-footer border-secondary">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Let’s go ✨</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Finish Modal -->
+  <div class="modal fade" id="finishModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark text-white border border-secondary">
+        <div class="modal-header border-secondary">
+          <h5 class="modal-title">🎉 You finished!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          All levels completed. You’re officially the Puzzle Queen 👑
+        </div>
+        <div class="modal-footer border-secondary">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
