@@ -2,9 +2,10 @@
 // CONFIG
 // ============================
 const TOTAL_LEVELS = 10;
-const COLS = 20; // 20x10 = 200
-const ROWS = 10;
-const TOTAL_PIECES = COLS * ROWS;
+const COLS = 10;  // 10 columns
+const ROWS = 5;   // 5 rows
+const TOTAL_PIECES = COLS * ROWS; // 50
+
 const SAVE_KEY = "lovePuzzleProgress_v1";
 
 const IMAGE_EXT = "jpg"; // change to "png" if needed
